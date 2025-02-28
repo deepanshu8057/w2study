@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Android एक मोबाइल ऑपरेटिंग सिस्टम है, जिसे मुख्य रूप से टचस्क्रीन डिवाइसेस जैसे स्मार्टफोन और टैबलेट के लिए डिज़ाइन किया गया है।">
+    <meta name="keywords" content="what is android in hindi, introduction to android in hindi, features of android in hindi, introduction and features of android in hindi">
+    <meta name="author" content="deepanshu">
+    <title>Introduction to android in Hindi - Android क्या है?</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #333;
+        }
+        body h1 {
+            color: black;
+            font-size: 25px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h1 {
+            color: black;
+            font-size: 25px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h2 {
+            color: yellow;
+            font-size: 20px;
+            margin: left;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h3 {
+            color: red;
+            font-size: 18px;
+            margin: left;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body p {
+            color: black;
+            font-size: 16px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        header {
+            background: red;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+ /* menu container*/
+          .menu-container {
+            position: relative;
+            width: fix;
+            color: #000000;
+            background-color: #0000ff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #3f3fff;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hamburger-icon {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu ul {
+                flex-direction: column;
+            }
+
+            .menu li {
+                margin: 10px 0;
+            }
+
+            .menu a {
+                display: block;
+                padding: 12px;
+            }
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .button {
+            background: #6a11cb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #4a0d8a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Welcome to this Website</h2>
+    </header>
+<div class="menu-container">
+        <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="advertise">Advertise with Us</a></li>
+                <li><a href="notes.html">Notes</a></li>
+            </ul>
+        </nav>
+    </div>
+       <br><br><br>   
+    
+  <h1>Introduction to android in Hindi - android ka parichay hindi me</h1><br><br><br>
+    <h2>Android क्या है?</h2>
+    <p>Android एक मोबाइल ऑपरेटिंग सिस्टम है, जिसे मुख्य रूप से टचस्क्रीन डिवाइसेस जैसे स्मार्टफोन और टैबलेट के लिए डिज़ाइन किया गया है। यह एक ओपन-सोर्स प्लेटफॉर्म है, जिसका मतलब है कि कोई भी कंपनी या डेवलपर इसे अपने हिसाब से कस्टमाइज़ कर सकता है। इसे Google द्वारा विकसित किया गया है और यह Linux Kernel पर आधारित है। Android दुनिया का सबसे ज्यादा इस्तेमाल किया जाने वाला मोबाइल ऑपरेटिंग सिस्टम है।</p>
+
+    <h2>Android के फायदे</h2>
+    <h3>ओपन-सोर्स प्लेटफॉर्म –</h3> 
+    <p>Android पूरी तरह से ओपन-सोर्स है, जिसका मतलब है कि कोई भी इसे फ्री में इस्तेमाल और कस्टमाइज़ कर सकता है।</p>
+    <h3>सस्ती डिवाइसेस –</h3> 
+    <p>Android के कारण बजट स्मार्टफोन भी संभव हो पाए हैं, जिससे हर कोई स्मार्टफोन का इस्तेमाल कर सकता है।</p>
+    <h3>एप्लिकेशन की विशाल रेंज – </h3>
+    <p>    Google Play Store पर लाखों ऐप्स उपलब्ध हैं, जिनमें गेम, सोशल मीडिया, प्रोडक्टिविटी, और अन्य कैटेगरी के ऐप्स शामिल हैं।</p>
+    <h3>यूज़र फ्रेंडली इंटरफेस –</h3> 
+    <p>Android का इंटरफेस सरल और कस्टमाइज़ेबल होता है, जिससे इसे हर कोई आसानी से चला सकता है।</p>
+    <h3>मल्टीटास्किंग सपोर्ट – </h3>
+    <p>एक ही समय में कई ऐप्स को आसानी से रन किया जा सकता है।</p>
+    <h3>कस्टमाइजेशन की सुविधा – </h3>
+    <p>यूज़र्स अपने स्मार्टफोन के थीम, आइकन, वॉलपेपर और विजेट्स को अपनी पसंद के अनुसार बदल सकते हैं।</p>
+    <h3>विभिन्न हार्डवेयर सपोर्ट – </h3>
+<p>Android सिर्फ स्मार्टफोन्स तक सीमित नहीं है, बल्कि यह स्मार्ट टीवी, स्मार्टवॉच, कार इंफोटेनमेंट सिस्टम, टैबलेट और अन्य डिवाइसेस पर भी चलता है।</p>
+<h3>रूट एक्सेस और मोडिफिकेशन – </h3>
+<p> टेक्निकल यूज़र्स अपने डिवाइस को रूट करके इसे और अधिक कस्टमाइज़ कर सकते हैं।</p>
+<h3>फ्री और पेड ऐप्स – </h3>
+<p> Google Play Store पर लाखों फ्री और पेड ऐप्स उपलब्ध हैं, जो यूज़र्स की जरूरतों को पूरा करते हैं।</p>
+<h3>फ्री सॉफ्टवेयर अपडेट्स – </h3>
+<p> Android समय-समय पर अपडेट्स जारी करता है, जिससे नए फीचर्स और सिक्योरिटी इंप्रूवमेंट्स मिलते हैं।</p>
+<h3>गूगल इंटीग्रेशन – </h3>
+<p> Android में गूगल की सभी सेवाओं (जैसे Gmail, Google Maps, YouTube, Google Drive) का बेहतरीन इंटीग्रेशन मिलता है।</p>
+<h3>वॉयस असिस्टेंट (Google Assistant) –</h3> 
+<p> Google Assistant की मदद से आप वॉयस कमांड देकर कई काम आसानी से कर सकते हैं।</p>
+<h3>मल्टीपल यूज़र सपोर्ट – </h3>
+<p> Android में एक ही डिवाइस पर अलग-अलग यूज़र प्रोफाइल बनाने की सुविधा होती है।</p>
+<h3>सिक्योरिटी फीचर्स – </h3>
+<p> Android में Face Unlock, Fingerprint Sensor, App Permissions, Find My Device जैसे सिक्योरिटी फीचर्स दिए गए हैं।</p>
+<h3>ऑफलाइन फीचर्स – </h3>
+<p> कई ऐप्स ऑफलाइन भी काम करते हैं, जिससे इंटरनेट न होने पर भी कई काम किए जा सकते हैं।</p>
+    <br><br><br><br><br><br><br><br><br><br>
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    const hamburger = document.querySelector('.hamburger-icon');
+    menu.classList.toggle('active');
+    
+    if (menu.classList.contains('active')) {
+        hamburger.innerHTML = '&#10006;'; // Cross icon (X)
+    } else {
+        hamburger.innerHTML = '&#9776;'; // Three lines icon
+    }
+}
+    </script>
+    <footer>
+        <p>&copy; 2025 Deepanshu. All rights reserved.</p>
+    </footer>
+</body>
+</html>
