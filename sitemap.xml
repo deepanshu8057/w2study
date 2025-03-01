@@ -25,7 +25,12 @@
 <url>
       <loc>https://deepanshu8057.github.io/w2study/android_notes_page.html</loc>
       <lastmod>2025-03-01T10:05+00:00</lastmod>
-      <priority>0.80</priority>
+      <priority>0.7</priority>
 </url>
-
+<url>
+      <loc>https://deepanshu8057.github.io/w2study/dalvik_virtual_machine.html</loc>
+      <lastmod>2025-03-01T11:40+00:00</lastmod>
+      <priority>0.7</priority>
+</url>
+      
 </urlset>
