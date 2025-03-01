@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Introdcution to Android, Dalvik Virtual Machine, .apk file extension, Fundamentals of Android, Basic Building bloks, UI Components, Components for communication">
+    <meta name="keywords" content="development of android notes in hindi, android development notes in hindi, diplom cs development of android notes in hindi">
+    <meta name="author" content="deepanshu ranjan">
+    <title>Development of Android applications complete notes in Hindi</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #333;
+        }
+        body h1 {
+            color: black;
+            font-size: 25px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h1 {
+            color: black;
+            font-size: 25px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h2 {
+            color: yellow;
+            font-size: 25px;
+            text-align: center;
+            margin: left;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h3 {
+            color: red;
+            text-align: center;
+            font-size: 20px;
+            margin: left;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h4 {
+            color: white;
+            text-align: left;
+            font-size: 20px;
+            margin: left;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body p {
+            color: black;
+            font-size: 16px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        header {
+            background: red;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+     header h3 {
+            margin: 0;
+            color: white;
+            font-size: 20px;
+        }
+
+ /* menu container*/
+          .menu-container {
+            position: relative;
+            width: fix;
+            color: #000000;
+            background-color: #0000ff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #3f3fff;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hamburger-icon {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu ul {
+                flex-direction: column;
+            }
+
+            .menu li {
+                margin: 10px 0;
+            }
+
+            .menu a {
+                display: block;
+                padding: 12px;
+            }
+        }
+        
+       .box {
+    background-color: red;
+    width: fix;
+    justify-content: left;
+    padding: 5px;
+    border: 2px solid #0000ff;
+    border-radius: 0px;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.2);
+    
+}
+    .box h3 {
+        color: blue;
+        text-align: left;
+        margin: 10px;
+        font-size: 20px;
+    }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            margin: 0;
+            color: white;
+        }
+
+        .button {
+            background: #6a11cb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #4a0d8a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Welcome to </h2>
+        <h3>https://deepanshu8057.github.io/w2study/</h3>
+    </header>
+<div class="menu-container">
+        <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="advertise">Advertise with Us</a></li>
+                <li><a href="notes.html">Notes</a></li>
+            </ul>
+        </nav>
+    </div>
+       <br><br><br>   
+    <h1>Development of android applications notes in hindi - android applications development ke notes hindi me</h1>
+    <br><br><br>
+    <div class="box">
+         <h2>Chapter 1</h2>        
+  <h3>
+      <li><a href="introduction_to_android.html">Introdcution to Android</a></li><br>
+      <li><a href="dalvik_virtual_machine.html">Dalvik Virtual Machine</a></li><br>
+      <li><a href="apk_file_extension">.apk file extension</a></li><br>
+      <li><a href="fundamentals_of_android">Fundamentals of Android</a></li><br>
+      <li><a href="basic_building_blocks">Basic Building bloks</a></li><br>
+      <li><a href="ui_components">UI Components</a></li><br>
+      <li><a href="components_for_communication">Components for communication</a></li><br>
+      <li><a href="android_api_levels">Android API Levels(versions & version names</a></li><br>
+  </h3>
+        <h2>Chapter 2</h2>
+        <h3>
+      <li><a href="setting_up_development_environment">Setting up development environment android</a></li><br>
+      <li><a href="manifest.xml">Manifest.xml</a></li><br>
+      <li><a href="gradle">Gradle</a></li><br>
+      <li><a href="">Uses-permission & uses-sdk</a></li><br>
+      <li><a href="">Resources & R.java</a></li><br>
+      <li><a href="">Assets</a></li><br>
+      <li><a href="">Layouts & Drawable Resurces</a></li><br>
+      <li><a href="">First Sample application</a></li><br>
+      <li><a href="">Launching emulator</a></li><br>
+      <li><a href="">Editing emulator settings</a></li><br>
+      <li><a href="">Emulator Shortcut</a></li><br>
+      <li><a href="">Logcat usage</a></li><br>
+      <li><a href="">Introduction to DDMS</a></li><br>
+      <li><a href="">Hello world app</a></li><br>
+      <li><a href="">Creating your first project The mainifest file Lagout resource</a></li><br>
+      <li><a href="">Running your app on Emulator</a></li><br>
+      <li><a href="">Debugging the Android App</a></li><br>    
+  </h3>
+      
+      <h2> Chapter 3</h2>
+        <h3>  
+      <li><a href="">Activities and Activity lifecycle</a></li><br>
+      <li><a href="">Permission System</a></li><br>
+        </h3>
+      <h4> Basic UI Components</h4>
+        <h3>
+      <li><a href="">Text View, button, radio button</a></li><br>
+      <li><a href="">Edit Text</a></li><br>
+      <li><a href="">Image view for image</a></li><br>
+      <li><a href="">Check box, Program Bar</a></li><br>
+      <li><a href="">Event Handling in Android</a></li><br>
+        </h3>
+      <h4>Layouts</h4>
+        <h3>
+      <li><a href="">Liner Layout</a></li><br>
+      <li><a href="">Relative Layout</a></li><br>
+      <li><a href="">Frame Layout</a></li><br>
+      <li><a href="">Coordinate Layout, [dip, dp, sip, sp] versus px</a></li><br>
+        </h3>
+      <h4>Intents</h4>
+        <h3>
+      <li><a href="">Intents Introduction and importance</a></li><br>
+      <li><a href="">Types of Intents(Explicit Intents, Implicit Intents)</a></li><br>
+        </h3>
+        <h2> Chapter 4</h2>
+        <h3>
+            <li><a href="">Introduction to Menus</a></li><br>
+            <li><a href="">Types of Menus (Option menu, Context menu)</a></li><br>
+            <li><a href="">Uses of Shared Preferences</a></li><br>
+        </h3>
+        <h2>Chapter 5</h2>
+        <h3>
+            <li><a href="">Time and date, List view</a></li><br>
+            <li><a href="">Grid view, caed view, recycler view</a></li><br>
+            <li><a href="">Adptors(Base Adaptor, Array Adptor) & View holder</a></li><br>
+            <li><a href="">Dialogs, Toast, Popup</a></li><br>
+            <li><a href="">Fragments</a></li><br>
+            <li><a href="">Material Design(Introduction, Navigation, Floating Button, Tool bar)</a></li><br>
+        </h3>
+            <h2>Chapter 6</h2>
+        <h3>
+            <li><a href="">Threads running on UI thread (Run on UI Thread)</a></li><br>
+            <li><a href="">Worker thread</a></li><br>
+            <li><a href="">Handlers & Runnable</a></li><br>
+            <li><a href="">Asyn task</a></li><br>
+            <li><a href="">calling web services and comsuming JSON data from web services</a></li><br>
+        </h3>
+        <h2>Chapter 7</h2>
+        <h3>
+            <li><a href="">Broadcast Receivers(INtroduction, different ways t register a broadcast receiver)</a></li><br>
+            <li><a href="">INtroduction to Notification</a></li><br>
+            <li><a href="">Overview & Types of services</a></li><br>
+            <li><a href="">Implementing a Service</a></li><br>
+            <li><a href="">Service Lifecycle</a></li><br>
+        </h3>
+        <h2>Chapter 7</h2>
+        <h3>
+            <li><a href="">Supported Storage in Android</a></li><br>
+            <li><a href="">SQLite Introduction</a></li><br>
+            <li><a href="">CRUD Opetations in SQLite database</a></li><br>
+            <li><a href="">Basics of Content Provider</a></li><br>
+        </h3>
+    </ul>
+</div>
+        </div>
+    
+    <br><br><br><br><br><br><br><br><br><br>
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    const hamburger = document.querySelector('.hamburger-icon');
+    menu.classList.toggle('active');
+    
+    if (menu.classList.contains('active')) {
+        hamburger.innerHTML = '&#10006;'; // Cross icon (X)
+    } else {
+        hamburger.innerHTML = '&#9776;'; // Three lines icon
+    }
+}
+    </script>
+    <footer>
+        <p>&copy; 2025 Deepanshu Ranjan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
