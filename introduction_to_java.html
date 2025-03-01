@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dalvik Virtual Machine (DVM) एक विशेष प्रकार की वर्चुअल मशीन है, जिसे Google ने Android ऑपरेटिंग सिस्टम के लिए विकसित किया था।">
+    <meta name="keywords" content="dalvik virtual machine in hindi, what is dalvik virtual machine in android in hindi, dvm in hindi, use of dvm in android in hindi">
+    <meta name="author" content="deepanshu ranjan">
+    <title>Dalvik Virtual Machine (DVM) और इसका Android application development में उपयोग</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #333;
+        }
+        body h1 {
+            color: black;
+            font-size: 25px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h1 {
+            color: black;
+            font-size: 25px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h2 {
+            color: yellow;
+            font-size: 20px;
+            margin: left;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h3 {
+            color: red;
+            font-size: 18px;
+            margin: left;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body p {
+            color: black;
+            font-size: 16px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        header {
+            background: red;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 25px;
+        }
+    header h3 {
+        color: white;
+        font-size: 15px;
+    }
+
+ /* menu container*/
+          .menu-container {
+            position: relative;
+            width: fix;
+            color: #000000;
+            background-color: #0000ff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #3f3fff;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hamburger-icon {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu ul {
+                flex-direction: column;
+            }
+
+            .menu li {
+                margin: 10px 0;
+            }
+
+            .menu a {
+                display: block;
+                padding: 12px;
+            }
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            color: white;
+            margin: 0;
+        }
+
+        .button {
+            background: #6a11cb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #4a0d8a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Welcome to</h2>
+        <h3>https://deepanshu8057.github.io/w2study/</h3>
+    </header>
+<div class="menu-container">
+        <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="advertise">Advertise with Us</a></li>
+                <li><a href="notes.html">Notes</a></li>
+            </ul>
+        </nav>
+    </div>
+       <br><br><br>   
+    
+  <h1> Introduction to java - Java का परिचय</h1><br><br>
+  <h2>Introudction to java</h2>
+  <p>Java एक उच्च-स्तरीय, ऑब्जेक्ट-ओरिएंटेड, प्लेटफॉर्म-स्वतंत्र प्रोग्रामिंग भाषा है जिसे James Gosling और उनकी टीम ने 1995 में Sun Microsystems (अब Oracle Corporation) के तहत विकसित किया था। यह सरल, सुरक्षित और पोर्टेबल भाषा है, जिसका उपयोग वेब, मोबाइल, डेस्कटॉप, और एंटरप्राइज एप्लिकेशन बनाने के लिए किया जाता है।</p>
+
+  <h2>Java की विशेषताएँ (Features of Java)</h2>
+  <p>Java को इसकी शक्तिशाली विशेषताओं के कारण दुनिया की सबसे लोकप्रिय प्रोग्रामिंग भाषाओं में से एक माना जाता है। इसकी कुछ प्रमुख विशेषताएँ इस प्रकार हैं:</p>
+
+  <h3>1. सरल (Simple)</h3>
+  <p>Java को इस तरह डिज़ाइन किया गया है कि इसे सीखना और उपयोग करना आसान हो। इसमें C++ की जटिलताओं (जैसे कि पॉइंटर्स और मल्टीपल इनहेरिटेंस) को हटा दिया गया है।</p>
+
+  <h3>2. ऑब्जेक्ट-ओरिएंटेड (Object-Oriented)</h3>
+  <p>Java पूरी तरह से OOP (Object-Oriented Programming) पर आधारित है, जिससे कोड को पुनः उपयोग (reusability) और मॉड्यूलर बनाया जा सकता है।</p>
+
+  <h3>3. प्लेटफॉर्म स्वतंत्र (Platform Independent)</h3>
+  <p>Java का सबसे बड़ा फायदा है कि यह WORA (Write Once, Run Anywhere) पर काम करता है। यानी, एक बार कोड लिखने के बाद इसे किसी भी ऑपरेटिंग सिस्टम (Windows, Linux, Mac) पर बिना बदलाव के चलाया जा सकता है।</p>
+
+  <h3>4. सुरक्षित (Secure)</h3>
+  <p>Java में Security Manager और Bytecode Verification जैसी विशेषताएँ होती हैं, जिससे यह वायरस और अनधिकृत एक्सेस से सुरक्षित रहती है।</p>
+
+  <h3>5. मजबूती (Robust)</h3>
+  <p>Java में Automatic Garbage Collection और Memory Management जैसी सुविधाएँ होती हैं, जिससे यह अन्य भाषाओं की तुलना में अधिक स्थिर (stable) होती है।</p>
+
+  <h3>6. मल्टी-थ्रेडेड (Multithreading Support)</h3>
+  <p>Java मल्टी-थ्रेडिंग को सपोर्ट करता है, जिससे एक साथ कई कार्य (tasks) किए जा सकते हैं, जिससे एप्लिकेशन की परफॉर्मेंस बेहतर होती है।</p>
+
+  <h3>7. डायनामिक और एक्सटेंसिबल (Dynamic & Extensible)</h3>
+  <p>Java JVM (Java Virtual Machine) का उपयोग करता है, जो इसे अन्य तकनीकों (जैसे कि C, C++, Python) के साथ आसानी से जोड़ने की क्षमता प्रदान करता है।</p>
+
+  <h3>8. उच्च प्रदर्शन (High Performance)</h3>
+  <p>हालांकि Java इंटरप्रेटेड भाषा है, लेकिन इसके Just-In-Time (JIT) Compiler की मदद से यह उच्च गति पर कार्य कर सकती है।</p>
+
+  <h3>9. वितरित प्रणाली (Distributed Computing Support)</h3>
+  <p>Java में Remote Method Invocation (RMI) और Enterprise Java Beans (EJB) जैसी तकनीकें हैं, जो वितरित (Distributed) एप्लिकेशन विकसित करने में मदद करती हैं।</p>
+
+  <h3>10. ओपन-सोर्स और बड़े कम्युनिटी सपोर्ट के साथ</h3>
+  <p>Java एक ओपन-सोर्स भाषा है, जिसे लाखों डेवलपर्स और कंपनियाँ उपयोग करती हैं। इसका बड़ा कम्युनिटी सपोर्ट इसे और अधिक लोकप्रिय बनाता है।</p>
+
+  <h2>Java के लाभ (Advantages of Java)</h2>
+  <p>Java को चुनने के कई फायदे हैं, जिनमें कुछ प्रमुख हैं:</p>
+
+  <p><b>प्लेटफॉर्म स्वतंत्रता:</b> Java को किसी भी ऑपरेटिंग सिस्टम पर चलाया जा सकता है।</p>
+<p><b>सुरक्षा:</b> इसमें बेहतर सुरक्षा सुविधाएँ होती हैं।</p>
+<p><b>सरल और उपयोग में आसान: </b>इसका सिंटैक्स समझना आसान होता है।</p>
+<p><b>मल्टी-थ्रेडिंग सपोर्ट:</b> इससे एप्लिकेशन की स्पीड और परफॉर्मेंस बढ़ती है।</p>
+<p><b>ऑब्जेक्ट-ओरिएंटेड प्रोग्रामिंग:</b> यह कोड को पुन: उपयोग योग्य और मॉड्यूलर बनाता है।</p>
+<p><b>बड़ी कम्युनिटी सपोर्ट:</b> किसी भी समस्या के समाधान के लिए ऑनलाइन सहायता उपलब्ध है।</p>
+
+  <h2>Java के नुकसान (Disadvantages of Java)</h2>
+  <p>हालांकि Java के कई फायदे हैं, लेकिन इसके कुछ नुकसान भी हैं:</p>
+
+  <p><b>धीमी गति (Slower Performance):</b> Java का JVM Interpretation इसे C++ जैसे भाषाओं की तुलना में थोड़ा धीमा बना सकता है।</p>
+    <p><b>मेमोरी उपयोग (High Memory Usage):</b> Java का Garbage Collection अधिक मेमोरी का उपयोग कर सकता है।</p>
+      <p><b>GUI कमजोर (Weak GUI Support):</b> Java में डेस्कटॉप GUI एप्लिकेशन बनाने के लिए सीमित टूल्स उपलब्ध हैं।</p>
+        <p><b>जटिलता (Verbosity):</b> Java का कोड अन्य भाषाओं की तुलना में लंबा और जटिल हो सकता है।</p>
+
+       
+    <br><br><br><br><br><br><br><br><br><br>
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    const hamburger = document.querySelector('.hamburger-icon');
+    menu.classList.toggle('active');
+    
+    if (menu.classList.contains('active')) {
+        hamburger.innerHTML = '&#10006;'; // Cross icon (X)
+    } else {
+        hamburger.innerHTML = '&#9776;'; // Three lines icon
+    }
+}
+    </script>
+    <footer>
+        <p>&copy; 2025 Deepanshu Ranjan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
