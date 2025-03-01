@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dalvik Virtual Machine (DVM) एक विशेष प्रकार की वर्चुअल मशीन है, जिसे Google ने Android ऑपरेटिंग सिस्टम के लिए विकसित किया था।">
+    <meta name="keywords" content="dalvik virtual machine in hindi, what is dalvik virtual machine in android in hindi, dvm in hindi, use of dvm in android in hindi">
+    <meta name="author" content="deepanshu ranjan">
+    <title>Dalvik Virtual Machine (DVM) और इसका Android application development में उपयोग</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: #333;
+        }
+        body h1 {
+            color: black;
+            font-size: 25px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h1 {
+            color: black;
+            font-size: 25px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h2 {
+            color: yellow;
+            font-size: 20px;
+            margin: left;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body h3 {
+            color: red;
+            font-size: 18px;
+            margin: left;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+    body p {
+            color: black;
+            font-size: 16px;
+            margin: auto;
+            padding: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        header {
+            background: red;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h2 {
+            margin: 0;
+            font-size: 25px;
+        }
+    header h3 {
+        color: white;
+        font-size: 15px;
+    }
+
+ /* menu container*/
+          .menu-container {
+            position: relative;
+            width: fix;
+            color: #000000;
+            background-color: #0000ff;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .hamburger-icon {
+            font-size: 30px;
+            cursor: pointer;
+            color: white;
+            display: none;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .menu ul {
+            display: flex;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .menu li {
+            margin: 0 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: 0.3s ease;
+        }
+
+        .menu a:hover {
+            background-color: #3f3fff;
+            border-radius: 5px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .hamburger-icon {
+                display: block;
+            }
+
+            .menu {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                background-color: #333;
+                text-align: center;
+                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            }
+
+            .menu.active {
+                display: flex;
+            }
+
+            .menu ul {
+                flex-direction: column;
+            }
+
+            .menu li {
+                margin: 10px 0;
+            }
+
+            .menu a {
+                display: block;
+                padding: 12px;
+            }
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer p {
+            color: white;
+            margin: 0;
+        }
+
+        .button {
+            background: #6a11cb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background: #4a0d8a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Welcome to</h2>
+        <h3>https://deepanshu8057.github.io/w2study/</h3>
+    </header>
+<div class="menu-container">
+        <div class="hamburger-icon" onclick="toggleMenu()">&#9776;</div>
+        <nav id="menu" class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="advertise">Advertise with Us</a></li>
+                <li><a href="notes.html">Notes</a></li>
+            </ul>
+        </nav>
+    </div>
+       <br><br><br>   
+    
+    <h1>Dalvik Virtual Machine (DVM) और इसका Android एप्लिकेशन डेवलपमेंट में उपयोग</h1>
+    <h2>Dalvik Virtual Machine (DVM) क्या है?</h2>
+    <p>Dalvik Virtual Machine (DVM) एक विशेष प्रकार की वर्चुअल मशीन है, जिसे Google ने Android ऑपरेटिंग सिस्टम के लिए विकसित किया था। यह Java Virtual Machine (JVM) के समान कार्य करता है लेकिन यह विशेष रूप से मोबाइल डिवाइसेज़ के लिए अनुकूलित है। DVM का मुख्य उद्देश्य Android एप्लिकेशन को एक इफेक्टिव और ऑप्टिमाइज़्ड तरीके से रन कराना है, जिससे कम मेमोरी और प्रोसेसिंग पावर का उपयोग हो।</p>
+
+    <h2>DVM का विकास और विशेषताएँ</h2>
+    <p>DVM को Dan Bornstein ने विकसित किया था, और इसका नाम Dalvik एक गाँव के नाम पर रखा गया था, जो Iceland में स्थित है। DVM की कुछ मुख्य विशेषताएँ इस प्रकार हैं:</p>
+
+    <h3>Register-based Architecture – </h3>
+    <p>DVM, Java Virtual Machine (JVM) की तरह stack-based architecture की बजाय register-based architecture का उपयोग करता है, जिससे यह तेज़ और अधिक प्रभावी बनता है।</p>
+    <h3>Low Memory Consumption –</h3> 
+    <p>यह कम RAM में भी अच्छे से कार्य करता है, जिससे यह मोबाइल डिवाइसेज़ के लिए अनुकूल है।</p>
+    <h3>.dex (Dalvik Executable) फाइल फॉर्मेट – </h3>
+    <p>Android एप्लिकेशन की Java Bytecode को .dex (Dalvik Executable) में कन्वर्ट किया जाता है, जिससे यह कम स्पेस लेता है और फास्ट एक्सीक्यूट होता है।</p>
+    <h3>Multiple Instances Support – </h3>
+    <p>DVM एक ही समय में कई एप्लिकेशन को अलग-अलग थ्रेड्स में रन कर सकता है।</p>
+    <h3>Battery Efficient –</h3>
+    <p>यह कम CPU उपयोग करता है, जिससे बैटरी की खपत कम होती है।</p>
+    
+    <h2>Android एप्लिकेशन डेवलपमेंट में DVM की भूमिका</h2>
+    <p>Android एप्लिकेशन डेवेलप करने के लिए Java, Kotlin जैसी लैंग्वेज का उपयोग किया जाता है। एप्लिकेशन के कोड को सबसे पहले Java Bytecode में कन्वर्ट किया जाता है और फिर इसे Dalvik Executable (.dex) में बदलकर DVM के द्वारा रन कराया जाता है।</p>
+
+    <h3>DVM में एप्लिकेशन रन होने की प्रक्रिया</h3>
+    <p><b>Source Code लिखना – </b>डेवलपर एप्लिकेशन का कोड Java या Kotlin में लिखता है।</p>
+    <p><b>Compilation –</b> कोड को Java Compiler के जरिए .class (Bytecode) में बदला जाता है।</p>
+    <p><b>Dex Compiler –</b> यह Bytecode को .dex (Dalvik Executable) में कन्वर्ट करता है।</p>
+    <p><b>APK Generation – </b>एप्लिकेशन को APK (Android Package) में पैक किया जाता है।</p>
+    <p><b>Execution in DVM –</b> जब एप्लिकेशन रन की जाती है, तो Android ऑपरेटिंग सिस्टम DVM का उपयोग करके dex फाइल को रन करता है।</p>
+    <h2>ART (Android Runtime) और DVM का स्थानांतरण</h2>
+    <p>Android 5.0 (Lollipop) से Google ने ART (Android Runtime) को DVM के स्थान पर लाना शुरू किया। ART, DVM से ज्यादा फास्ट और एफिशिएंट है क्योंकि यह Ahead-of-Time (AOT) Compilation का उपयोग करता है, जबकि DVM Just-in-Time (JIT) Compilation का उपयोग करता था।</p>
+    
+    <p>Dalvik Virtual Machine (DVM) Android एप्लिकेशन डेवलपमेंट के लिए एक महत्वपूर्ण टेक्नोलॉजी थी, जिसने एप्लिकेशन को कम मेमोरी, कम CPU उपयोग और बेहतर मल्टी-टास्किंग के साथ चलाने में मदद की। हालांकि, अब इसे Android Runtime (ART) द्वारा रिप्लेस कर दिया गया है, लेकिन शुरुआती Android डिवेलपमेंट में इसकी भूमिका बहुत महत्वपूर्ण थी।</p>
+    
+    <br><br><br><br><br><br><br><br><br><br>
+<script>
+function toggleMenu() {
+    const menu = document.getElementById('menu');
+    const hamburger = document.querySelector('.hamburger-icon');
+    menu.classList.toggle('active');
+    
+    if (menu.classList.contains('active')) {
+        hamburger.innerHTML = '&#10006;'; // Cross icon (X)
+    } else {
+        hamburger.innerHTML = '&#9776;'; // Three lines icon
+    }
+}
+    </script>
+    <footer>
+        <p>&copy; 2025 Deepanshu Ranjan. All rights reserved.</p>
+    </footer>
+</body>
+</html>
